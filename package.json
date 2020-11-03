@@ -1,0 +1,29 @@
+{
+  "name": "goit-js-hw-11-timer",
+  "version": "1.0.0",
+  "description": "'timer'",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html --public-url /goit-js-hw-11-timer/",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Roman-Dobrodii/goit-js-hw-11-timer.git"
+  },
+  "author": "'Roman Dobrodii <romariosi007@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Roman-Dobrodii/goit-js-hw-11-timer/issues"
+  },
+  "homepage": "https://Roman-Dobrodii.github.io/goit-js-hw-11-timer",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-nuke-dist": "^1.0.1"
+  },
+  "dependencies": {
+    "gh-pages": "^3.1.0"
+  }
+}
