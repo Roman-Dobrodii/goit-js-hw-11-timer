@@ -33,8 +33,6 @@ const timer = new CountdownTimer({
   targetDate: new Date('Nov 11, 2020'),
 });
 
-// console.log(timer);
-
 timer.renderCountdownTimer();
 
 function pad(value) {
