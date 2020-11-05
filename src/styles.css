@@ -1,0 +1,44 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+  margin: 0;
+  padding: 0;
+  background: cornflowerblue;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: cornsilk;
+  font-family: sans-serif;
+  padding: 0 30px;
+  border-right: 1px solid #fff;
+}
+
+.field:last-child {
+  border: none;
+}
+
+.value {
+  font-size: 50px;
+}
+
+.label {
+  font-size: 20px;
+}
