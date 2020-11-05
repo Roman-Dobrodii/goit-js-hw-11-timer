@@ -1,0 +1,2 @@
+*,:after,:before{box-sizing:border-box}body{min-height:500px;margin:0;padding:0;background:#6495ed}.field,.timer,body{display:flex;justify-content:center;align-items:center}.field{flex-direction:column;color:#fff8dc;font-family:sans-serif;padding:0 30px;border-right:1px solid #fff}.field:last-child{border:none}.value{font-size:50px}.label{font-size:20px}
+/*# sourceMappingURL=/goit-js-hw-11-timer/styles.361d05f8.css.map */
