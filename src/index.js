@@ -15,7 +15,7 @@ class CountdownTimer {
     setInterval(() => {
         const currentTime = Date.now();
         const deltaTime = this.targetDate - currentTime;
-        this.updateTimerFace(getTimeComponents(deltaTime));
+        this.updateTimerFace(this.getTimeComponents(deltaTime));
     }, 1000);
     }
 
@@ -26,6 +26,18 @@ class CountdownTimer {
       this.refs.$secs.innerHTML = secs;
   }
 
+    pad(value) {
+      return String(value).padStart(2, '0');
+  }
+
+    getTimeComponents(time) {
+      const days = this.pad(Math.floor(time / (1000 * 60 * 60 * 24)));
+      const hours = this.pad(Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+      const mins = this.pad(Math.floor((time % (1000 * 60 * 60)) / (1000 * 60)));
+      const secs = this.pad(Math.floor((time % (1000 * 60)) / 1000));
+
+    return { days, hours, mins, secs };
+}
 }
 
 const timer = new CountdownTimer({
@@ -35,15 +47,7 @@ const timer = new CountdownTimer({
 
 timer.renderCountdownTimer();
 
-function pad(value) {
-  return String(value).padStart(2, '0');
-}
+// function pad(value) {
+//   return String(value).padStart(2, '0');
+// }
 
-function getTimeComponents(time) {
-  const days = pad(Math.floor(time / (1000 * 60 * 60 * 24)));
-  const hours = pad(Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
-  const mins = pad(Math.floor((time % (1000 * 60 * 60)) / (1000 * 60)));
-  const secs = pad(Math.floor((time % (1000 * 60)) / 1000));
-
-  return { days, hours, mins, secs };
-}
