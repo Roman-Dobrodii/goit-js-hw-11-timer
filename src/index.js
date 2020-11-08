@@ -51,3 +51,5 @@ timer.renderCountdownTimer();
 //   return String(value).padStart(2, '0');
 // }
 
+// Замечание:
+// Перепишите таймер так, чтобы вся логика была инкапсулирована в классе.
